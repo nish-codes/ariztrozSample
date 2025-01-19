@@ -1,0 +1,46 @@
+@font-face {
+    font-family:satoshi ;
+    src: url(./fonts/Satoshi-Medium.woff2);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+.hero{
+    height: 100vh;
+    background-image: url(../BG.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header{
+    background-color: rgba(31, 31, 31, 0.658);
+    backdrop-filter: blur(5px);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:100px;
+    font-family: "satoshi";
+}
+
+
+  
+ 
+.headText *{
+    margin-left: 20px;
+}
+.contactButton{
+    background-color: #1A2CD7;
+    padding: 15px;
+    border: none;
+    letter-spacing: 0.5px;
+    font-family: "Open Sans", serif;
+}
