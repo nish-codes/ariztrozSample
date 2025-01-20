@@ -9,10 +9,20 @@
     margin: 0;
     color: white;
 }
+body{
+    width: 100%;
+    box-sizing: border-box;
+}
+
 a{
     text-decoration: none;
 }
 .hero{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    align-items: center;
     height: 100vh;
     background-image: url(../BG.gif);
     background-repeat: no-repeat;
@@ -22,13 +32,15 @@ a{
 .header{
     background-color: rgba(31, 31, 31, 0.658);
     backdrop-filter: blur(5px);
-    height: 80px;
+    height: 13vh;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    text-wrap: nowrap;
+    justify-content: space-around;
     align-items: center;
-    gap:100px;
     font-family: "satoshi";
+    gap: 300px;
+
 }
 
 
@@ -36,11 +48,70 @@ a{
  
 .headText *{
     margin-left: 20px;
+
 }
 .contactButton{
     background-color: #1A2CD7;
     padding: 15px;
+    
     border: none;
     letter-spacing: 0.5px;
     font-family: "Open Sans", serif;
+}
+.heroText{
+ font-family:Arial, Helvetica, sans-serif;
+ width: 65%;
+ font-size: 60px;
+ font-weight:100;
+ justify-content: center;
+ position: absolute;
+ top:50%;
+ left: 40%;
+ user-select: none;
+ transform: translate(-50%, -50%);
+}
+.explore{
+    margin-top: 45px;
+    background-color: transparent;
+    color: rgba(209, 209, 209, 0.952);
+    border: 2px solid grey;
+    padding: 5px 11px;
+    border-radius: 3px;
+    font-size: 20px;
+}
+.explore:hover{
+    background-color: rgba(209, 209, 209, 0.4);
+    color: rgba(255, 255, 255, 0.821);
+    cursor: pointer;
+}
+.mid1{
+    background-color: black;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: flex-start;
+    
+    
+}
+.mid1 *{
+    width: 50%;
+    margin-left: 40%;
+    transform: translateX(-50%);
+    width: 65%;
+    
+}
+.mid1-text{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    font-weight:100;
+    
+}
+.mid1-text2{
+    font-family: sans-serif;
+    color: aliceblue;
+    font-size: 18px;
+    color: rgba(147, 162, 162, 0.877);
 }
