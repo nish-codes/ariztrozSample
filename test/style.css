@@ -14,6 +14,7 @@ body{
     box-sizing: border-box;
     overflow-x: hidden;
     background-color: black;
+    
 }
 
 a{
@@ -157,12 +158,13 @@ a{
 }
 .importantInfo{
     display: flex;
+    flex-wrap: nowrap;
     font-family: "satoshi";
     width: 86.7%;
     margin-left: 7.2%;
-   
+
     justify-content: space-between;
-    height: fit-content;
+    height: 350px;
     position: relative;
 
 }
@@ -171,6 +173,7 @@ a{
     overflow: hidden;
     flex-direction: column;
     position: relative;
+    height: 100%;
 }
 .headerContent{
     font-size: 90px;
@@ -181,7 +184,7 @@ a{
 }
 .hoverContent{
     width: 100%;
-    height: 100%;
+    height: 90%;
     position:absolute;
     top:103%;
     left: 0;
@@ -193,7 +196,79 @@ a{
     transition: top 0.5s ease-in-out;
     
 }
-
 .importantContent:hover .hoverContent{
     top:0;
 }
+.testimonial_wrapper{
+    background-color: white;
+}
+.testimonials{
+    background-color:white;
+    max-width: 1200px;
+    margin:auto;
+    
+}
+.testimonials *{
+    color:black;
+}
+.section_grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:2rem;
+}
+.section_card{
+    position: relative;
+    overflow:hidden;
+    isolation: isolate;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0,0, 0.1);
+    padding:5rem 2rem 2rem;
+    transition: 0.3s;
+}
+.section_card::before{
+    position: absolute;
+    content:" ";
+    top:0;
+    left: 0;
+    width: 58%;
+    border-radius: 100%;
+    height: 58%;
+    transform: translate(-50%, -50%);
+    background-color: #1A2CD7;
+    z-index: -1;
+    transition: 0.5s;
+}
+.section_card span{
+    position: absolute;
+    top:0;
+    left: 0;
+    font-size: 2rem;
+    padding: 1rem;
+    
+}
+.section_card p{
+    color:black;
+    margin-bottom: 2rem;
+    transition: 0.3s;
+}
+.section_card h5{
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.section_card h6{
+    font-size: 1rem;
+    font-weight: 400;
+    transition: 0.3s;
+}
+.section_card:hover::before {
+    width: 400%;
+    height: 400%;
+  }
+  
+  .section_card:hover :is(h5,h6,p) {
+    color: white;
+  }
+  
+  
