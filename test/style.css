@@ -201,6 +201,7 @@ a{
 }
 .service_slider{
     background-color: white;
+    display: flex;
     
 }
 .service_slider *{
@@ -212,6 +213,7 @@ a{
     justify-content: center;
     gap:5vw;
     margin-top: 20px;
+    flex-shrink: 0;
 }
 .image_container img{
     width: 300px;
