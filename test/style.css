@@ -1,26 +1,26 @@
 @font-face {
-    font-family:satoshi ;
+    font-family: satoshi;
     src: url(./fonts/Satoshi-Medium.woff2);
 }
 
-
-*{
+* {
     padding: 0;
     margin: 0;
     color: white;
 }
-body{
+
+body {
     width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
     background-color: black;
-    
 }
 
-a{
+a {
     text-decoration: none;
 }
-.hero{
+
+.hero {
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -32,7 +32,8 @@ a{
     background-size: cover;
     background-position: center;
 }
-.header{
+
+.header {
     background-color: rgba(31, 31, 31, 0.658);
     backdrop-filter: blur(5px);
     height: 13vh;
@@ -43,36 +44,104 @@ a{
     align-items: center;
     font-family: "satoshi";
     gap: 300px;
-
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
 
-  
- 
-.headText *{
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+.headText{
+    display: flex;
+}
+.headText * {
     margin-left: 20px;
-
 }
-.contactButton{
+
+.contactButton {
     background-color: #1A2CD7;
     padding: 15px;
-    
     border: none;
     letter-spacing: 0.5px;
     font-family: "Open Sans", serif;
 }
-.heroText{
- font-family:Arial, Helvetica, sans-serif;
- width: 65%;
- font-size: 80px;
- font-weight:100;
- justify-content: center;
- position: absolute;
- top:50%;
- left: 40%;
- user-select: none;
- transform: translate(-50%, -50%);
+
+.heroText {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 65%;
+    font-size: 80px;
+    font-weight: 100;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    user-select: none;
+    transform: translate(-50%, -50%);
 }
+
+@media screen and (max-width: 768px) {
+    .header {
+        justify-content: space-between;
+        padding: 0 20px;
+        gap: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .headText {
+        position: fixed;
+        left: -100%;
+        top: 13vh;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(31, 31, 31, 0.9);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 20px 0;
+    }
+
+    .headText.active {
+        left: 0;
+    }
+
+    .headText a {
+        margin: 16px 0;
+    }
+
+    .talk {
+        display: none;
+    }
+
+    .heroText {
+        font-size: 40px;
+        width: 80%;
+        left: 50%;
+    }
+}
+
 .explore{
     margin-top: 45px;
     background-color: transparent;
@@ -307,4 +376,4 @@ a{
   .section_card:hover :is(h5,h6,p) {
     color: white;
   }
-  
+   

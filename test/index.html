@@ -13,28 +13,34 @@
 <body>
     <div class="hero">
         
-    <section class="header">
-        <div class="logo">
-            this is a logo tyfy
-        </div>
-        <div class="headText">
-            <a href="./">About us</a>
-            <a href="./">Services</a>
-            <a href="./">Projects</a>
-        </div>
-        <div class="talk">
-            <button class="contactButton">Let's Connect</button>
-        </div>
-    </section>
-    <div class="heroText">
+        <section class="header">
+            <div class="logo">
+                this is a logo tyfy
+            </div>
+            <div class="headText">
+                <a href="./">About us</a>
+                <a href="./">Services</a>
+                <a href="./">Projects</a>
+            </div>
+            <div class="talk">
+                <button class="contactButton">Let's Connect</button>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </section>
+        
+    <!-- <div class="heroText">
     <div >The Perfect place to Scale the buisness</div>
     <button class="explore">Explore Now</button>
     </div>
-    </div>
-    <div class="mid1">
+    </div> -->
+    <!-- <div class="mid1">
         <div class="mid1-text">Work with tried and true digital experts</div>
         <p class="mid1-text2">Grow your brand. Drive results. We're your partner in navigating the ever-evolving digital and tech landscape, a team of passionate professionals dedicated to helping businesses achieve maximum success. </p>
-    </div>
+    </div> -->
      <!-- <div class="videoSection">
         <div class="slider">
             <div class="slide">
@@ -130,8 +136,8 @@
             
         </div>
     </div>*/ -->
-    <div class="importantInfo">
-        <div class="importantContent">
+    <!-- <div class="importantInfo"> -->
+        <!-- <div class="importantContent">
             <div class="headerContent">250 +</div>
              <div class="subcontent">clients</div>
              <div class="hoverContent">
@@ -160,9 +166,9 @@
      
         </div>
     </div>
-    
-</div>
-<div class="service_slider">
+     -->
+<!-- </div> -->
+<!-- <div class="service_slider">
     <div class="service_card">
         <div class="image_container"><img src="../comp.avif" ></div>
         <div class="service_content">
@@ -219,7 +225,21 @@
         </div>
     </div>
   </div>
-  </div>
+  </div> -->
+<script>
+    const hamburger = document.querySelector(".hamburger");
+const headText = document.querySelector(".headText");
 
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    headText.classList.toggle("active");
+});
+
+document.querySelectorAll(".headText a").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    headText.classList.remove("active");
+}));
+
+</script>
 </body>
 </html>
