@@ -94,7 +94,7 @@ a {
         padding: 0 20px;
         gap: 0;
     }
-
+ 
     .hamburger {
         display: block;
     }
@@ -133,7 +133,11 @@ a {
     }
 
     .talk {
-        display: none;
+        display: inline;
+        
+    }
+    .contactButton{
+        padding: 10px;
     }
 
     .heroText {
