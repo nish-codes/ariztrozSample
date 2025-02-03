@@ -12,7 +12,6 @@
 body {
     width: 100%;
     box-sizing: border-box;
-    overflow-x: hidden;
     background-color: black;
 }
 
@@ -274,6 +273,9 @@ a {
 .service_slider{
     background-color: white;
     display: flex;
+    overflow-x: hidden;
+    height: 100vh;
+    align-items: center;
     
 }
 .service_slider *{
@@ -290,6 +292,11 @@ a {
 .image_container img{
     width: 300px;
     height: 340px;
+    object-fit: cover;
+    border: solid 5px black;
+    border-radius: 4px;
+    outline: solid 3px black;
+    outline-offset: 5px;
 }
 .service_content{
     width: 35%;
@@ -394,6 +401,40 @@ a {
     
     .section_card {
         padding: 4rem 1.5rem 1.5rem;
+    }
+    .service_slider *{
+        color: black;
+    }
+    .service_card{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap:5vw;
+        margin-top: 20px;
+        flex-shrink: 0;
+    }
+    .image_container img{
+        scale: 0.75;
+    }
+    .service_content{
+        width: 70%;
+        text-align: center;
+    }
+    .service_content *{
+        font-family: 'satoshi';
+        font-weight: 200;
+    }
+    .service_content h1{
+        font-size: 2.8rem;
+        
+    }
+    .service_content p{
+    
+        color: gray;
+        margin-bottom: 10px;
     }
 }
 
