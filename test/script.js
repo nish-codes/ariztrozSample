@@ -5,7 +5,7 @@ gsap.to(".service_card", {
       trigger: ".service_slider",
       start: "top 0%",
       end: "+=100%", 
-      scrub: 2,
+      scrub: 3,
       pin: true,
       anticipatePin: 1,
     },
